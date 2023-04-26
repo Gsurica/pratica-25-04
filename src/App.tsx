@@ -1,23 +1,11 @@
 import { useState } from "react"
 import { MenuAppBar } from "./components/AppBar"
 import { SwipeableTemporaryDrawer } from "./components/Drawer"
+import { AppRouter } from "./routes"
 
 function App() {
 
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-
-  return (
-    <>
-      <MenuAppBar 
-        setIsOpen={setIsOpen}
-      />
-
-      <SwipeableTemporaryDrawer 
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-      />
-    </>
-  )
+  return <AppRouter />
 }
 
 export default App
